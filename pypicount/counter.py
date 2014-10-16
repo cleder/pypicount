@@ -39,7 +39,7 @@ def count_packages(package_names):
     return package_list
 
 def save_csv(package_list, name):
-    with open('%s.csv' % name, 'wb') as csv_out_file:
+    with open('%s.csv' % name, 'w') as csv_out_file:
         writer =  csv.writer(csv_out_file)
         writer.writerow(['last month', 'last week', 'last day', 'all',
                     'num_releases', 'first_upload', 'name'])
@@ -71,5 +71,5 @@ def count_search(**kwargs):
 if __name__ == '__main__':
     kwargs = dict(x.split('=', 1) for x in sys.argv[1:])
     package_list = count_search(**kwargs)
-    save_csv(package_list, kwargs.values()[0])
+    save_csv(package_list, list(kwargs.values())[0])
 
