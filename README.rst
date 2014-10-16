@@ -13,14 +13,14 @@ Command line usage
 ::
 
     $ python counter.py name=kotti
-    bobtemplates.kotti : 264 downloads last_month:
-    Kotti : 6324 downloads last_month:
-    kotti_accounts : 378 downloads last_month:
-    kotti_analytics : 93 downloads last_month:
-    kotti_blog : 373 downloads last_month:
-    kotti_calendar : 403 downloads last_month:
-    kotti_contactform : 575 downloads last_month:
-    kotti_contentpreview : 139 downloads last_month:
+    bobtemplates.kotti : 264 downloads last_month
+    Kotti : 6324 downloads last_month
+    kotti_accounts : 378 downloads last_month
+    kotti_analytics : 93 downloads last_month
+    kotti_blog : 373 downloads last_month
+    kotti_calendar : 403 downloads last_month
+    kotti_contactform : 575 downloads last_month
+    kotti_contentpreview : 139 downloads last_month
     ...
 
 Valid keys for search are:
@@ -52,6 +52,22 @@ Valid keys for search are:
 - download_url
 
 Invalid keys are ignored.
+
+Python
+--------
+
+::
+
+    >>> from pypicount import count_search, count_user, save_csv
+    >>> count_user('christian.ledermann')
+    collective.geo.opensearch : 307 downloads last_month
+    collective.geo.flexitopic : 345 downloads last_month
+    ...
+    >>> count_search(name='collective.geo')
+    collective.geo.behaviour : 286 downloads last_month
+    collective.geo.bundle : 491 downloads last_month
+    ...
+
 
 .. image:: https://api.travis-ci.org/cleder/pypicount.png
     :target: https://travis-ci.org/cleder/pypicount

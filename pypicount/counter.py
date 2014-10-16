@@ -17,7 +17,7 @@ def count_packages(package_names):
         reader = codecs.getreader("utf-8")
         package_data =  json.load(reader(urlopen(url)))
         downloads =  package_data['info']['downloads']
-        print(name, ':', downloads['last_month'], 'downloads last_month:')
+        print(name, ':', downloads['last_month'], 'downloads last_month')
         all_time = 0
         package_releases = package_data['releases']
         num_releases = len(package_releases)
