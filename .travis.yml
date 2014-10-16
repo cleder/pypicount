@@ -1,0 +1,16 @@
+language: python
+python:
+  - "3.4"
+  - "2.7"
+
+install:
+    pip install coveralls --use-mirrors
+script:
+    coverage run --source=czml setup.py test
+
+after_success:
+    coveralls
+
+notifications:
+  email:
+    - christian.ledermann@gmail.com
