@@ -2,9 +2,9 @@ Introduction
 ============
 
 Have you wondered how many times certain packages were downloaded from pypi
-during their lifetime? or how well are your packages doing?
+during their lifetime? Or how well are your packages doing?
 
-Well you can use vanity_ but then you have to get every package name you
+You can use vanity_ but then you have to get every package name you
 want to check or you can use this package.
 
 Command line usage
@@ -24,18 +24,39 @@ Command line usage
     ...
 
 Valid keys for search are:
+
 - name
+
 - version
+
 - author
+
 - author_email
+
 - maintainer
+
 - maintainer_email
+
 - home_page
+
 - license
+
 - summary
+
 - description
+
 - keywords
+
 - platform
+
 - download_url
 
 Invalid keys are ignored.
+
+.. image:: https://api.travis-ci.org/cleder/pypicount.png
+    :target: https://travis-ci.org/cleder/pypicount
+
+.. image:: https://coveralls.io/repos/cleder/pypicount/badge.png?branch=master
+    :target: https://coveralls.io/r/cleder/pypicount?branch=master
+
+.. _vanity: https://pypi.python.org/pypi/vanity
