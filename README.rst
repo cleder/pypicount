@@ -22,6 +22,10 @@ Command line usage
     kotti_contactform : 575 downloads last_month
     kotti_contentpreview : 139 downloads last_month
     ...
+    $ python counter.py keywords=plone
+    Products.CMFDynamicViewFTI : 2613 downloads last_month
+    Products.PloneHotfix20131210 : 417 downloads last_month
+    ...
 
 Valid keys for search are:
 
@@ -52,6 +56,19 @@ Valid keys for search are:
 - download_url
 
 Invalid keys are ignored.
+
+For your convinience a csv file is created with the name `searchterm.csv`
+so the above searches will create `plone.csv` and `kotti.csv` file.
+
+::
+
+    $ head plone.csv
+    last month,last week,last day,all,num_releases,first_upload,name
+    18073,8187,2021,17191,45,2014-09-26T15:22:57,plonetheme.bootstrapModern
+    8840,1741,315,477798,101,2007-02-11T03:57:30,plone.app.layout
+    ...
+
+
 
 Python
 --------

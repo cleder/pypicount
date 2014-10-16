@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import sys, os
 from setuptools.command.test import test as TestCommand
 
-version = '0.0'
+version = '0.1'
 
 class PyTest(TestCommand):
     def finalize_options(self):
@@ -18,7 +18,7 @@ class PyTest(TestCommand):
 
 setup(name='pypicount',
       version=version,
-      description="Count download pypi packages",
+      description="Count download of pypi packages",
       long_description=open('README.rst').read(),
       # Get strings from http://pypi.python.org/pypi?%3Aaction=list_classifiers
       classifiers=[

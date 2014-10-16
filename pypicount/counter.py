@@ -63,6 +63,7 @@ def count_search(**kwargs):
     client = xmlrpclib.ServerProxy('https://pypi.python.org/pypi')
     packages = client.search(kwargs)
     package_names = [p['name'] for p in packages]
+    package_names = list(set(package_names))
     package_list = count_packages(package_names)
     return package_list
 
